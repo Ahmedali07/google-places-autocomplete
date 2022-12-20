@@ -1,38 +1,458 @@
-.App {
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/src/assets/fonts/ProximaNova.eot");
+  src: url("/src/assets/fonts/ProximaNova.eot")
+      format("embedded-opentype"),
+    url("/src/assets/fonts/ProximaNova.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/src/assets/fonts/ProximaNovaRegBold.eot");
+  src: url("/src/assets/fonts/ProximaNovaRegBold.eot")
+      format("embedded-opentype"),
+    url("/src/assets/fonts/ProximaNovaRegBold.ttf") format("truetype"),
+    url("/src/assets/fonts/ProximaNovaRegBold.woff") format("woff"),
+    url("/src/assets/fonts/ProximaNovaRegBold.svg") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/src/assets/fonts/ProximaNovaSemibold.eot");
+  src: url("/src/assets/fonts/ProximaNovaSemibold.eot")
+      format("embedded-opentype"),
+    url("/src/assets/fonts/ProximaNovaSemibold.ttf") format("truetype"),
+    url("/src/assets/fonts/ProximaNovaSemibold.woff") format("woff"),
+    url("/src/assets/fonts/ProximaNovaSemibold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/src/assets/fonts/ProximaNovaBold.eot");
+  src: url("/src/assets/fonts/ProximaNovaBold.eot")
+      format("embedded-opentype"),
+    url("/src/assets/fonts/ProximaNovaBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: block;
+}
+
+body {
+  -ms-overlfow-style: scrollbar;
+  min-width: 320px;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 400;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  color: #006f90;
+  font-weight: 600 !important;
+  margin-top: 0;
+}
+
+h1 a,
+.h1 a,
+h2 a,
+.h2 a,
+h3 a,
+.h3 a,
+h4 a,
+.h4 a,
+h5 a,
+.h5 a,
+h6 a,
+.h6 a {
+  color: inherit;
+}
+
+h1,
+.h1 {
+  font-size: 28px !important;
+  line-height: 45.76px;
+  margin-bottom: 5px;
+}
+
+h2,
+.h2 {
+  font-size: 28px !important;
+  line-height: 30.77px;
+  margin-bottom: 15px;
+}
+
+h3,
+.h3 {
+  font-size: 17px !important;
+  line-height: 18.01px;
+  margin-bottom: 5px;
+}
+
+a {
+  color: #006f90;
+  text-decoration: none;
+  background-color: transparent;
+  transition: all 0.35s ease;
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+  -ms-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+}
+
+.fwSemiBold {
+  font-weight: 600 !important;
+}
+
+.fwEbold {
+  font-weight: 800 !important;
+}
+
+.textRight {
+  text-align: right !important;
+}
+
+.textLeft {
+  text-align: left !important;
+}
+
+.textCenter {
+  text-align: center !important;
+}
+
+.grayLight {
+  color: #f5fcfb !important;
+}
+
+.bgGrayLight {
+  background-color: #f5fcfb !important;
+}
+
+.clrDarkBlue {
+  color: #003B4D !important;
+}
+
+.clrPrimary {
+  color: #006f90 !important;
+}
+
+.clrSecondary {
+  color: #b9fff8 !important;
+}
+
+.clrWhite {
+  color: #fff !important;
+}
+
+.bgClrPrimary {
+  background-color: #006f90 !important;
+}
+
+.bgPrimary {
+  background-color: #006f90 !important;
+}
+
+.bgLight {
+  background-color: rgba(215, 238, 236, 0.32);
+}
+
+.btn {
+  font-weight: 700;
+  font-size: 16px;
   text-align: center;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+  -webkit-transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+  -moz-transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+  -ms-transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+  -o-transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn:focus {
+  box-shadow: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.btnPrimary {
+  background-color: #006f90;
+  color: #fff !important;
+  border-color: #006f90;
+}
+
+.btnPrimary:hover {
+  background-color: #fff;
+  color: #006f90;
+}
+
+.btnWhite {
+  background-color: #fff;
+  color: #006f90;
+  border-color: #fff;
+}
+
+.btnWhite:hover {
+  background-color: #32BCB1;
+  color: #fff;
+  border-color: #32BCB1;
+}
+
+.btnSecondary {
+  background-color: #32BCB1;
+  color: #fff;
+  border-color: #32BCB1;
+}
+
+.btnSecondary:hover {
+  background-color: #006f90;
+  color: #fff;
+  border-color: #006f90;
+}
+
+cite {
+  font-style: normal;
+}
+
+table {
+  width: 100%;
+}
+
+/* container */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.modal,
+.modal-backdrop.show {
+  z-index: 9999 !important;
+}
+
+.modal-backdrop.show {
+  opacity: 1 !important;
+  background-color: rgba(4, 59, 76, 0.6) !important;
+}
+
+.mmt_popup .modal-content {
+  border: 0;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+.mmt_popup .modal-dialog {
+  max-width: 95% !important;
+}
+
+.mmt_popup .modal-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 576px) {
+  .mmt_popup .modal-dialog {
+    max-width: 90% !important;
+  }
+  
+  .container {
+    max-width: 540px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (min-width: 768px) {
+  .btn {
+    font-size: 18px !important;
+  }
+  
+  h1,
+  .h1 {
+    font-size: 30px !important;
+  }
+  
+  .container {
+    max-width: 720px;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+@media (min-width: 992px) {
+  .btn {
+    font-size: 20px !important;
+  }
+  
+  .container {
+    max-width: 960px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 1150px) {
+  .container {
+    max-width: 1100px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .containerAlt {
+    max-width: 1090px;
   }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1270px;
+  }
+  
+  .containerAlt {
+    max-width: 1090px;
+  }
+}
+
+
+/* Reset CSS */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+ v2.0 | 20110126
+ License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0,0,0,0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+/* IcoMoon Generated Icons */
+@font-face {
+  font-family: 'icomoon';
+  src:
+    url('../fonts/icomoon.ttf?h7kkm8') format('truetype'),
+    url('../fonts/icomoon.woff?h7kkm8') format('woff'),
+    url('../fonts/icomoon.svg?h7kkm8#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icomoon-"], [class*=" icomoon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icomoon-icoDetail:before {
+  content: "\e900";
+}
+
+.icomoon-icoPlanBenefit:before {
+  content: "\e901";
+}
+
+.icomoon-icoMembershipPlan:before {
+  content: "\e902";
+}
+
+.icomoon-icoParticipatingOffice:before {
+  content: "\e903";
 }
